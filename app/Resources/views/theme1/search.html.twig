@@ -1,0 +1,71 @@
+{% extends 'theme1/base.html.twig' %}
+{% block stylesheet %}
+<!--<link href="{{ asset('assets/css/nivo-lightbox.css') }}" rel="stylesheet" />
+	<link href="{{ asset('assets/css/nivo-lightbox-theme/default/default.css') }}" rel="stylesheet" type="text/css" />
+	<link href="{{ asset('assets/css/animations.css') }}" rel="stylesheet" />-->
+{% endblock %}
+{% block body %}
+<section class="hero" id="intro">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-12 text-right navicon">
+		  <a id="nav-toggle" class="nav_slide_button" href="#"><span></span></a>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-8 col-md-offset-2 text-center inner">
+			<div class="animatedParent">
+				<h1 class="animated fadeInDown">MUSIM BOCOR</h1>
+				<p class="animated fadeInUp">Udah dari dulu tahu kalo bocor kenapa nggak ditambal tong</p>
+				
+				<table class="search-panel">
+					<tr>
+						<td>
+							<input type="text" class="form-control input-lg" id="skill" placeholder="Skill" required="required" />
+						</td>
+						<td>
+							<input type="text" class="form-control input-lg" id="skill" placeholder="Location" required="required" />
+						</td>
+						<td>
+							<div  style="height:46px;">
+								<select name="experience" id="experience" class="form-control input-lg">
+									<option value="2">2</option>
+								</select>
+							</div>
+						</td>
+						<td>
+							<a href="#about" class="search-btn btn-scroll">Search</a>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+	   </div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-6 col-md-offset-3 text-center">
+		  <a href="#about" class="learn-more-btn btn-scroll">
+			  <i class="fa fa-fw fa-upload"></i>
+			  Upload your cv
+		  </a>
+		</div>
+	  </div>
+	</div>
+</section>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('assets/js/nivo-lightbox.min.js') }}"></script>
+
+<script>
+
+</script>
+<!--
+<script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>	
+<script src="{{ asset('assets/js/jquery.scrollTo.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
+<script src="{{ asset('assets/js/stellar.js') }}"></script>
+<script src="{{ asset('assets/js/nivo-lightbox.min.js') }}"></script>
+<script src="{{ asset('assets/js/css3-animate-it.js') }}"></script>
+-->
+{% endblock %}

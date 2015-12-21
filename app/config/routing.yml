@@ -1,0 +1,9 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    defaults:  { _controller: AppBundle:Default:index }
+
+job_seeker:
+    resource: '@JobSeeker/Controller/'
+    type:     annotation
+    defaults:  { _controller: JobSeeker:Default:index }
