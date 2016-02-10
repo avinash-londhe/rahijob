@@ -6,4 +6,3 @@ app:
 job_seeker:
     resource: '@JobSeeker/Controller/'
     type:     annotation
-    defaults:  { _controller: JobSeeker:Default:index }

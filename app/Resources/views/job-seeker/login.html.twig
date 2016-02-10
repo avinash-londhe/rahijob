@@ -1,0 +1,89 @@
+
+{% extends 'theme1/base.html.twig' %}
+{% block stylesheet %}
+    <link href="{{ asset('assets/css/theme1/form-element.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+
+    <div>
+        <div class="navigation_header">
+            Job Seeker Login
+        </div>
+
+        <div class="container containerPage">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="panel panel-default">
+
+
+                        <div class="panel-heading clearfix">
+                            <h3 class="panel-title">Login</h3>
+                        </div>
+                        <div class="panel-body normal-padding row">
+
+                            <div class="error">
+                                {% if resultSet.error is defined %}
+                                    {{ resultSet.error }}
+                                {% endif %}
+                            </div>
+
+                            <div class="">
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            {{ form_label(form.email) }}
+                                        </td>
+                                        <td>
+                                            {{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.email) }}
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>{{ form_label(form.password) }}</td>
+                                        <td>
+                                            {{ form_widget(form.password, { 'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.password) }}
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
+                            <div class="">
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="single-content">
+                                                <a >Forgot password ?</a><br>
+                                                <a>Create account with us?</a>
+                                            </div>
+
+
+                                        </td>
+                                        <td class="floatRight">
+
+                                            {{ form_widget(form.login, { 'attr': {'class': 'btn btn-primary'} }) }}
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    {{ form_end(form) }}
+{% endblock %}
+
+

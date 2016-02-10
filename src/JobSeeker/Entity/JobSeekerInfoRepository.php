@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: avinash
- * Date: 1/12/16
- * Time: 8:36 PM
- */
+namespace JobSeeker\Entity;
+
+use Doctrine\ORM\EntityRepository;
+
+class JobSeekerInfoRepository extends EntityRepository
+{
+
+    public function save($jobSeekerInfo)
+    {
+        $em = $this->getEntityManager();
+        $em->persist($jobSeekerInfo);
+        $em->flush();
+    }
+}

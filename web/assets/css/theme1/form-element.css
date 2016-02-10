@@ -1,0 +1,18 @@
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container .normal-padding table td {
+    padding: 10px;
+}
+
+.signUpLeftPanel {
+    width:48%;
+    float: left;
+}
+.signUpRightPanel {
+    width:48%;
+    float: right;
+}
+
